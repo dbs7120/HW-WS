@@ -2,7 +2,7 @@ package com.ssafy;
 
 import java.util.Scanner;
 
-public class BuildingTest_1 {
+public class BuildingTest {
 
 	static int result;
 	static int N;
