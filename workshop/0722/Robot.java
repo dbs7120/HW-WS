@@ -2,7 +2,7 @@ package com.ssafy;
 
 import java.util.Scanner;
 
-public class Sam1 {
+public class Robot {
 	public static void main(String[] args) {
 		// A: right
 		// B: right, left
