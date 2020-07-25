@@ -2,7 +2,7 @@ package com.ssafy;
 
 import java.util.Scanner;
 
-public class Sam2 {
+public class WaterStrider {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
