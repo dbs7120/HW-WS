@@ -1,2 +1,2 @@
 # SSAFY 실습
-} } int k = n/2+1; //마름모 위 for(int i=0;i<k;i++) { int y=0; for(int j=k;j>i+1;j--) { //System.out.print(" "); y++; } for(int j=0;j<=i*2;j++,y++) { sum+=map[i][y]; //System.out.print(map[i][y]); } //System.out.println(); } //마름모 아래 int x= k; for(int i=n-k;i>0;i--,x++) { int y=0; for(int j=0;j<k-i;j++) { //System.out.print(" "); y++; } for(int j=0;j<i*2-1;j++,y++){ sum+=map[x][y]; //System.out.print(map[x][y]); } //System.out.println(); } System.out.println("#"+(tc+1)+" "+sum); } } }
+
