@@ -1,2 +1,4 @@
-# SSAFY실습
-# BOJ 문제자바 https://github.com/dbs7120/BOJ 
+# SSAFY실습 
+https://lab.ssafy.com/dbm01049/04_gumi2_workshop/tree/master/workshop
+# BOJ 문제
+https://github.com/dbs7120/BOJ 
