@@ -10,24 +10,24 @@ import java.util.StringTokenizer;
 
 // N:5
 // 6 9 5 7 4	입력값, 스택 peek 값 비교진행
-// 6 입력										=>  isEmpty로인해 종료, 0출력	=>	push(6,0)
-// 9 입력	9 < 6	False, pop					=>	isEmpty로인해 종료, 0출력	=>	push(9,1)
-// 5 입력	5 < 9 	True						=> 	9인덱스(1)+1 = 2출력		=>	push(5,2)
-// 7 입력	7 < 5 	False, pop => 7 < 9 True	=>	9인덱스(1)+1 = 2출력		=>	push(7,3)
-// 4 입력	4 < 7 	True						=>  7인덱스(3)+1 = 4출력		=>	push(4,4)
+// 6 입력						=> isEmpty로인해 종료, 0출력	=>	push(6,0)
+// 9 입력	9 < 6	False, pop			=> isEmpty로인해 종료, 0출력	=>	push(9,1)
+// 5 입력	5 < 9 	True				=> 9인덱스(1)+1 = 2출력		=>	push(5,2)
+// 7 입력	7 < 5 	False, pop => 7 < 9 True	=> 9인덱스(1)+1 = 2출력		=>	push(7,3)
+// 4 입력	4 < 7 	True				=> 7인덱스(3)+1 = 4출력		=>	push(4,4)
 // 종료
 
 
 // N:7
 // 8 7 6 5 6 7 8	입력값, 스택 peek 값 비교진행
 //
-// 8 입력																				=>  isEmpty로인해 종료, 0출력	=>	push(8,0)
-// 7 입력	7 < 8	True																=>	8인덱스(0)+1 = 1출력		=>	push(7,1)
-// 6 입력	6 < 7 	True																=>	7인덱스(1)+1 = 2출력		=>	push(6,2)
-// 5 입력	5 < 6 	True																=>	6인덱스(2)+1 = 3출력		=>	push(5,3)
-// 6 입력	6 < 5 	False, pop => 6 < 6 False, pop => 6 < 7 True						=> 	7인덱스(1)+1 = 2출력		=>	push(6,4)
-// 7 입력	7 < 6 	False, pop => 7 < 5 False, pop => 7 < 7	False, pop => 7 < 8 True	=>  8인덱스(0)+1 = 1출력		=>	push(7,5)
-// 8 입력	8 < 8 	False, pop => 7 < 9 False, pop => 8 < 7 False ... 8 < 8 False, pop	=>	isEmpty로인해 종료, 0출력	=>	push(8,6)
+// 8 입력											=> isEmpty로인해 종료, 0출력	=>	push(8,0)
+// 7 입력	7 < 8	True									=> 8인덱스(0)+1 = 1출력		=>	push(7,1)
+// 6 입력	6 < 7 	True									=> 7인덱스(1)+1 = 2출력		=>	push(6,2)
+// 5 입력	5 < 6 	True									=> 6인덱스(2)+1 = 3출력		=>	push(5,3)
+// 6 입력	6 < 5 	False, pop => 6 < 6 False, pop => 6 < 7 True				=> 7인덱스(1)+1 = 2출력		=>	push(6,4)
+// 7 입력	7 < 6 	False, pop => 7 < 5 False, pop => 7 < 7	False, pop => 7 < 8 True	=> 8인덱스(0)+1 = 1출력		=>	push(7,5)
+// 8 입력	8 < 8 	False, pop => 7 < 9 False, pop => 8 < 7 False ... 8 < 8 False, pop	=> isEmpty로인해 종료, 0출력	=>	push(8,6)
 // 종료
 
 public class BOJ2493 {
