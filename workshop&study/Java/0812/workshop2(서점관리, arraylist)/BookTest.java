@@ -92,7 +92,7 @@ public class BookTest {
 					System.out.println("4. 보유중인 책확인");
 					System.out.println("5. 보유중인 잡지확인");
 					System.out.println("6. 보유중인 올해의 잡지확인(" + cal.get(Calendar.YEAR) + "년)");
-					System.out.println("5. 출판사로 검색");
+					System.out.println("7. 출판사로 검색");
 					System.out.println("8. 가격으로 검색");
 					System.out.println("9. 보유중인 도서 금액 합계");
 					System.out.println("10. 보유중인 도서 금액 평균");
