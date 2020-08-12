@@ -106,7 +106,7 @@ public class BookMgrImpl implements IBookMgr {
 		for (Book e : books) {
 			if (e == null)
 				break;
-			if (e.getPublisher() == publisher) {
+			if (e.getPublisher().equals(publisher)) {
 				temp[cnt] = e;
 				cnt++;
 			}
