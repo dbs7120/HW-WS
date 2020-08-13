@@ -22,5 +22,3 @@ public class ATest {
 		System.out.println("end");
 	}
 }
-
-
