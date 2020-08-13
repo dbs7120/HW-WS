@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ProductTest {
 
 	// ArrayList<Refrigerator>, ArrayList<TV> 출력용
-	public static void printProduct(ArrayList<?> in) {
+	public static void printProduct(ArrayList<? extends Product> in) {
 		for (Object e : in) {
 			System.out.println(e);
 		}
