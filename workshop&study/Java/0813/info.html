@@ -1,0 +1,55 @@
+-- html 파일
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>person 정보</p>
+	<table>
+		<tr>
+			<td>name</td><td>age</td>
+		</tr>
+		<tr>
+			<td>홍길동</td><td>30</td>
+		</tr>
+		<tr>
+			<td>장나라</td><td>32</td>
+		</tr>		
+	</table>
+</body>
+</html>
+
+--XML 파일
+<?xml version="1.0" encoding="UTF-8"?>
+<person_info>
+	<person_list>
+		<person>
+			<name>홍길동</name>
+			<age>30</age>
+		</person>
+		<person>
+			<name>장나라</name>
+			<age>32</age>
+		</person>
+	</person_list>
+<person_info>
+
+-- JSON 파일
+{
+	"info" : "personInfo";
+	"person_list":[
+		{"name" : "홍길동", "age" : 30},
+		{"name" : "장나라", "age" : 32}
+	]
+}
+-- CUSTOM 방식
+홍길동,32#장나라,32
+
+-- protocl 방식
+1,30$2,32
+
+
+
+		
