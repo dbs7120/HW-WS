@@ -1,6 +1,7 @@
 # SSAFY 실습 
 https://lab.ssafy.com/dbm01049/04_gumi2_workshop/tree/master/workshop
 ```bash
+```export LANG=C.UTF-8
 |-- 07
 |   |-- BOJ2493.java
 |   |-- Solution.java
