@@ -14,7 +14,6 @@ public class ProductServer_syntest {
 			while (true) {
 				Socket socket = serverSocket.accept();
 				new Thread(() -> {
-
 					try (ObjectInputStream ois = new ObjectInputStream(socket.getInputStream())) {
 
 						@SuppressWarnings("unchecked")
