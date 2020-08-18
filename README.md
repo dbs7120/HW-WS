@@ -1,6 +1,197 @@
 # SSAFY 실습 
 https://lab.ssafy.com/dbm01049/04_gumi2_workshop/tree/master/workshop
 ```bash
+├─Algo
+│  ├─0728
+│  │      .gitkeep
+│  │      d0728_Flatten.java
+│  │      d0728_Ladder.java
+│  │      Ex_DiceTest.java
+│  │      FlattenInput.txt
+│  │      ladderInput.txt
+│  │
+│  ├─0729
+│  │      .gitkeep
+│  │      input_battle.txt
+│  │      Solution3.java
+│  │      Solution4.java
+│  │      workshop1.java
+│  │      workshop5.java
+│  │
+│  ├─0730
+│  │      .gitkeep
+│  │      WebBrowserVisit.java
+│  │      Workshop1.java
+│  │
+│  ├─0731
+│  │      .gitkeep
+│  │      workshop1.java
+│  │      workshop2.java
+│  │
+│  ├─0803
+│  │  │  .gitkeep
+│  │  │  input_사칙연산_.txt
+│  │  │  input_암호문_.txt
+│  │  │  output_사칙연산_.txt
+│  │  │  output_암호문_.txt
+│  │  │  workshop1.java
+│  │  │  workshop2.java
+│  │  │
+│  │  └─이진트리BFS실습
+│  │          .gitkeep
+│  │          CompleteBinaryTree.java
+│  │          CompleteBinaryTreeTest.java
+│  │
+│  ├─0804
+│  │      .gitkeep
+│  │      Solution2.java
+│  │
+│  ├─0805
+│  │      .gitkeep
+│  │      Solution1.java
+│  │      SortTest.java
+│  │      workshop1.java
+│  │
+│  ├─0806
+│  │      .gitkeep
+│  │      BOJ5585.java
+│  │      MST_KruskalTest.java
+│  │      StudentTest.java
+│  │      StudentTest2.java
+│  │      StudentTest3.java
+│  │      workshop1.java
+│  │
+│  └─0807
+│          test.java
+│          workshop3.java
+│          workshop4.java
+│          workshop5.java
+│          workshop6.java
+│
+└─Java
+    ├─0720
+    │      .gitkeep
+    │      AlpaTest1.java
+    │      AlpaTest2.java
+    │      GameTest.java
+    │
+    ├─0721
+    │      .gitkeep
+    │      ArrayTest.java
+    │      LottoTest.java
+    │
+    ├─0722
+    │  │  .gitkeep
+    │  │  BuildingTest.java
+    │  │  Robot.java
+    │  │  test1.java
+    │  │  test2.java
+    │  │  WaterStrider.java
+    │  │
+    │  └─input
+    │          .gitkeep
+    │          input_BuildingTest_.txt
+    │          input_Robot_.txt
+    │          input_WaterStrider_.txt
+    │
+    ├─0724
+    │  │  .gitkeep
+    │  │
+    │  └─Movie
+    │          .gitkeep
+    │          Movie.java
+    │          MovieMgr.java
+    │          MovieTest.java
+    │
+    ├─0726
+    │      .gitkeep
+    │      Building.java
+    │      inputBuilding.txt
+    │      Robot.java
+    │      Strider.java
+    │
+    ├─0810
+    │      Corona.java
+    │      EqualsTest.java
+    │      InterfaceTest.java
+    │      OverloadingTest.java
+    │      OverridingTest.java
+    │      SamTest.java
+    │      TypeTest.java
+    │      Virus.java
+    │
+    ├─0811
+    │      ExceptionTest.java
+    │      MakeExceptionTest.java
+    │      SetTest.java
+    │
+    ├─0812
+    │  │  .gitkeep
+    │  │  AnonymousTest.java
+    │  │  AnonymousTest2.java
+    │  │  Outer.java
+    │  │
+    │  ├─workshop1(서점관리,배열)
+    │  │      .gitkeep
+    │  │      Book.java
+    │  │      BookManager.java
+    │  │      BookTest.java
+    │  │      Magazine.java
+    │  │
+    │  ├─workshop2(서점관리, arraylist)
+    │  │      .gitkeep
+    │  │      Book.java
+    │  │      BookMgrImpl.java
+    │  │      BookTest.java
+    │  │      IBookMgr.java
+    │  │      Magazine.java
+    │  │
+    │  └─workshop3(예외처리추가)
+    │          .gitkeep
+    │          Book.java
+    │          BookMgrImpl.java
+    │          BookTest.java
+    │          IBookMgr.java
+    │          Magazine.java
+    │
+    ├─0813
+    │  │  ATest.java
+    │  │  info.html
+    │  │  ObjectStreamSort.java
+    │  │  ObjectStreamTest.java
+    │  │
+    │  └─virus
+    │      ├─dom
+    │      │      virus-report.xml
+    │      │      VirusReport.java
+    │      │      VirusReportDomTest.java
+    │      │
+    │      └─sax
+    │              SAXParserTest.java
+    │              SDate.java
+    │              virus-report.xml
+    │              VirusSAXHandler.java
+    │              ViursReport.java
+    │
+    ├─0814
+    │      .gitkeep
+    │      diagram.png
+    │      INewsDao.java
+    │      News.java
+    │      NewsDAOSAXImpl.java
+    │      NewsMain.java
+    │
+    └─0818
+            GsonTest.java
+            NetworkInetAddressTest.java
+            NetworkSimpleClient.java
+            NetworkSimpleServer.java
+            ThreadPause.java
+            ThreadTest.java
+```
+# SSAFY 과제 
+https://lab.ssafy.com/dbm01049/04_gumi2_workshop/tree/master/homework
+```bash
 ├─07
 │      .gitkeep
 │      BOJ2493.java
@@ -80,8 +271,5 @@ https://lab.ssafy.com/dbm01049/04_gumi2_workshop/tree/master/workshop
             Refrigerator.java
             TV.java
 ```
-# SSAFY 과제 
-https://lab.ssafy.com/dbm01049/04_gumi2_workshop/tree/master/homework
-
 # BOJ 문제
 https://github.com/dbs7120/BOJ 
