@@ -78,9 +78,6 @@ public class ProductMgrImpl implements IProductMgr, Serializable {
 		new Thread(() -> {
 			try (Socket s = new Socket("127.0.0.1", 8080)) {
 				ObjectOutputStream oos = new ObjectOutputStream(s.getOutputStream());
-				synchronized (products) {
-
-				}
 				oos.writeObject(products);
 			} catch (IOException e) {
 				e.printStackTrace();
