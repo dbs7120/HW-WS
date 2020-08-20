@@ -169,7 +169,7 @@ public class ProductDao {
 		String type = (select == 1) ? "TV" : "냉장고";
 
 		if (con != null) {
-			sql = "select * from product where Type = ?;"; // select by name(포함, like적용)
+			sql = "select * from product where Type = ?;"; 
 			try {
 				pstmt = con.prepareStatement(sql);
 				pstmt.setString(1, type);
@@ -196,7 +196,7 @@ public class ProductDao {
 		Product product = null;
 
 		if (con != null) {
-			sql = "select * from product where price <= ?;"; // select by name(포함, like적용)
+			sql = "select * from product where price <= ?;"; 
 			try {
 				pstmt = con.prepareStatement(sql);
 				pstmt.setInt(1, price);
