@@ -1,2 +1,1 @@
-<img src="/cap.png"  width="700" height="370">
-
+![캡쳐](./cap.png)
