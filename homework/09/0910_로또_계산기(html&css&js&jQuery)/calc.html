@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Page Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var cal = "";
+        $(".numBtn").click(function () {
+          cal += $(this).val();
+          $("#calculator").val(cal);
+        });
+        $(".ceBtn").click(function () {
+          $("#calculator").val("");
+          cal = "";
+        });
+        $(".resultBtn").click(function () {
+          let cal = eval($("#calculator").val());
+          console.log(cal);
+          // 소수점이하 갑 존재시 실수로 출력
+          if (cal % 1 != 0) {
+            cal = parseFloat(cal).toFixed(6);
+            console.log(cal);
+          }
+          let $new = $("<li></li>").text($("#calculator").val() + " = " + cal);
+          $("#calc_list").append($new);
+          $("#calculator").val(cal);
+        });
+      });
+    </script>
+    <style>
+      #calculator {
+        width: 250px;
+        height: 40px;
+        font-size: 30px;
+        text-align: right;
+        font-style: italic;
+      }
+      table {
+        width: 100px;
+        height: 100px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .numBtn,
+      .resultBtn,
+      .ceBtn {
+        width: 60px;
+        height: 60px;
+      }
+      h2 {
+        font-weight: bold;
+        text-align: center;
+      }
+      #result_list {
+        width: 250px;
+        background-color: rgb(218, 200, 200);
+      }
+      #calc_list {
+        /* text-align: right; */
+        padding-right: 30px;
+        font-weight: bold;
+        list-style-position: inside;
+        list-style-type: decimal-leading-zero;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="calculator" placeholder="0.0" />
+    </div>
+    <div>
+      <table>
+        <tr>
+          <td>
+            <input class="numBtn" type="button" value="7" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="8" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="9" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="+" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input class="numBtn" type="button" value="4" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="5" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="6" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="-" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input class="numBtn" type="button" value="1" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="2" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="3" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="*" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input class="numBtn" type="button" value="0" />
+          </td>
+          <td>
+            <input class="ceBtn" type="button" value="CE" />
+          </td>
+          <td>
+            <input class="resultBtn" type="button" value="=" />
+          </td>
+          <td>
+            <input class="numBtn" type="button" value="/" />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="result_list">
+      <h2>결 과 이 력</h2>
+      <ol id="calc_list"></ol>
+    </div>
+  </body>
+</html>
