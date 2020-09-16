@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SSAFY 게시판</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#write").click(function () {
+          location.href = "write.html";
+        });
+        $("#back").click(function () {
+          location.href = "index.html";
+        });
+        $(".dropdown-item").click(function () {
+          var str = $(this).html();
+          $("#dropdownMenuButton").html(str);
+        });
+      });
+    </script>
+    <style>
+      #user-prompt,
+      #search {
+        text-align: right;
+      }
+      h2,
+      #btns,
+      td,
+      th:nth-child(1) {
+        text-align: center;
+      }
+      .table {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      td:nth-child(odd) {
+        font-weight: bold;
+      }
+      #text {
+        font-weight: normal;
+        text-align: left;
+      }
+      #commetLine {
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="user-prompt">
+      <h6>
+        싸피
+        <small>님 환영합니다.</small>
+        <button type="button" class="btn btn-link">로그아웃</button>
+      </h6>
+    </div>
+
+    <h2>SSAFY 게시판</h2>
+    <nav class="navbar navbar-expand-sm">
+      <button type="write" class="mr-2 btn btn-primary" id="write">새글쓰기</button>
+      <button type="modify" class="mr-2 btn btn-info" id="modify">수정</button>
+      <button type="delete" class="mr-2 btn btn-danger" id="delete">삭제</button>
+    </nav>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>제목</th>
+          <th colspan="5">글번호,글제목</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>작성자</td>
+          <td>싸피</td>
+          <td>조회수</td>
+          <td>00</td>
+          <td>작성일</td>
+          <td>0000.00.00</td>
+        </tr>
+        <tr>
+          <td colspan="6" rowspan="3" id="text">
+            &nbsp;
+            <br />
+            글내용
+            <br />
+            &nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="btns">
+      <button type="newlist" class="mr-2 btn btn-info" id="newlist">최신목록</button>
+      <button type="back" class="mr-2 btn btn-info" id="back">이전목록</button>
+    </div>
+    <form id="commetLine">
+      <div class="row">
+        <div class="col-sm-10">
+          <textarea class="form-control" rows="3" id="comment" placeholder="주제와 무관환 댓글, 악플은 사제 될 수 있습니다."></textarea>
+        </div>
+        <div class="col-sm-2 d-flex align-items-stretch">
+          <button type="comment" class="mr-2 btn btn-primary" id="comment">작성</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

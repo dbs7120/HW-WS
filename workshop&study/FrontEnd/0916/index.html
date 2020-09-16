@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+    <meta name="description" content="Bootstrap navbar examples for any type of project, Bootstrap 4" />
+
+    <title>SSAFY Cinema</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("[type=button]").click(function () {
+          var movie = $(this).val();
+          console.log(movie);
+          $.ajax({
+            url: "data/" + movie + ".json",
+            type: "GET",
+            dataType: "json",
+            success: function (json) {
+              makeList(json);
+            },
+            error: function (xhr, status, msg) {
+              console.log("상태값 : " + status + " Http에러 메시지:" + msg);
+            },
+          });
+          function makeList(data) {
+            $("#modalTitle").html(movie);
+            $("#modalTitle").css("font-weight", "bold");
+            var html = "";
+            console.log(data);
+            var html = "";
+            $.each(data, function (index, item) {
+              html += "<tr>";
+              html += "<td>" + index + "</td>";
+              html += "<td>" + item + "</td>";
+              html += "</tr>";
+            });
+            console.log(html);
+            $("#timeTableBody > tr").empty();
+            $("#timeTableBody").append(html);
+          }
+        });
+        $("[type=submit]").click(function () {
+          var video = $(this).val();
+          $("#movidVideo").attr("src", "./media/" + video);
+        });
+
+        $(function () {
+          "use strict";
+
+          $("[data-trigger]").on("click", function () {
+            var trigger_id = $(this).attr("data-trigger");
+            $(trigger_id).toggleClass("show");
+            $("body").toggleClass("offcanvas-active");
+          });
+
+          $(".btn-close").click(function (e) {
+            $(".navbar-collapse").removeClass("show");
+            $("body").removeClass("offcanvas-active");
+          });
+        });
+      });
+    </script>
+
+    <style type="text/css">
+      #nav {
+        box-shadow: 1px 3px 1px 1px gray;
+      }
+      body.offcanvas-active {
+        overflow: hidden;
+      }
+      .offcanvas-header {
+        display: none;
+      }
+      #moralTEXT {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      #prompt {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 960px) {
+        .offcanvas-header {
+          display: block;
+        }
+        .navbar-collapse {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 100%;
+          width: 100%;
+          height: 30%;
+          padding-right: 1rem;
+          padding-left: 1rem;
+          overflow-y: auto;
+          visibility: hidden;
+          background-color: rgb(219, 207, 207);
+          transition: visibility 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .navbar-collapse.show {
+          visibility: visible;
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm navbar-light bg-light" id="nav">
+        <a class="navbar-brand" href="#">SSAFY Cinema</a>
+        <button class="navbar-toggler" type="button" data-trigger="#main_nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="main_nav">
+          <div class="offcanvas-header mt-3">
+            <button class="btn btn-outline-danger btn-close float-right">&times Close</button>
+            <h5 class="py-2 text-white">SSAFY Cinema</h5>
+          </div>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">최신영화소개</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">영화관찾기</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">로그인</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">회원가입</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="jumbotron jumbotron-fluid" id="prompt">
+        <div>
+          <h2 id="title">무공해 힐링 시네마</h2>
+          <p>무공해 힐링 시네마는 새로운 개념의 영화 장르의 한가지를 말하는 것 입니다. 지친 영혼을 위한 휴식을 주는 영화나, 마음을 정화시키고 치휴하는 힘을 가진 영화들….</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4" style="padding-left: 30px">
+          <video id="movidVideo" src="./media/KungFuPanda_Sample.mp4" type="vide/mp4" width="400" controls></video>
+        </div>
+        <div class="col-sm-8">
+          <div class="row">
+            <div class="col">
+              <img src="./img/kungfupanda.png" width="250px" />
+              <button type="submit" value="KungFuPanda_Sample.mp4" id="kungfupandaVideo" class="btn btn-outline-primary">예고편보기</button>
+              <button type="button" value="kungfupanda" id="kungfupandaTime" class="btn btn-outline-danger" data-toggle="modal" data-target="#timeTable">상영시간보기</button>
+            </div>
+            <div class="col">
+              <img src="./img/avengers.png" width="250px" />
+              <button type="submit" value="avengers.mp4" id="avengersVideo" class="btn btn-outline-primary">예고편보기</button>
+              <button type="button" value="avengers" id="avengersTime" class="btn btn-outline-danger" data-toggle="modal" data-target="#timeTable">상영시간보기</button>
+            </div>
+
+            <div class="col">
+              <img src="./img/xman.png" width="250px" />
+              <button type="submit" value="BigBuck.theora.ogv" id="xmanVideo" value="xman" class="btn btn-outline-primary">예고편보기</button>
+              <button type="button" value="xman" id="xmanTime" value="xman" class="btn btn-outline-danger" data-toggle="modal" data-target="#timeTable">상영시간보기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="timeTable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" id="moralTEXT">
+          <div class="modal-header">
+            <h4 class="modal-title w-100 font-weight-bold">상영시간보기</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="modalTitle"></div>
+          <table>
+            <tbody id="timeTableBody"></tbody>
+          </table>
+
+          <div class="modal-footer d-flex">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
