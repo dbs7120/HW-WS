@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product</title>
+<script>
+	function back(event) {
+		event.preventDefault();
+		location.href = "index.html";
+	}
+</script>
+</head>
+<body>
+	<fieldset>
+		<legend>상품 추가</legend>
+		<form method="post" name="addForm" action="./main.do?act=add">
+			<div id="content">
+				상품명: &nbsp; <input type="text" name="name" /><br />
+				상품가격: &nbsp;<input type="text" name="price" /> <br />
+				상품설명: &nbsp;<input type="text" name="desc" /> <br /> <br />
+
+				<button type="submit">저장</button>
+				<button onclick="back(event)">뒤로가기</button>
+			</div>
+		</form>
+	</fieldset>
+</body>
+</html>
