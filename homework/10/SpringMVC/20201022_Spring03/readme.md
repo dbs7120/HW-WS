@@ -1,7 +1,7 @@
 <h4>제품검색화면 Spring MVC & MyBatis 적용</h4><br/>
 
 <h4>product.xml</h4><br/>
-![.cap](cap/product(xml).png)<br/>
+![.cap](cap/product.png)<br/>
 
 <h4>시작화면</h4><br/>
 ![.cap](cap/index.png)<br/>
